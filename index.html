@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        nav {
+            display: flex;
+            background-color: #f2f2f2;
+        }
+        nav a {
+            padding: 14px 20px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        nav a.active {
+            background-color: #4db6ac
+        }
+        nav a.service {
+            background-color: #424242;
+            position: relative;
+        }
+        nav a.service::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 4px;
+            background-color: #4db6ac;
+        }
+        nav a.project {
+            background-color: #e0e0e0;
+            color: #424242; 
+            position: relative;
+        }
+        nav a.about {
+            background-color: #e0e0e0;
+            color: #424242;
+            position: relative;
+        }
+        nav a.project:hover, nav a.about:hover {
+            background-color: #424242;
+            color: white;
+        }
+        nav a.project:hover::after, nav a.about:hover::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 4px;
+            background-color: #4db6ac;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#" class="service">Service</a>
+        <a href="#" class="project">Project</a>
+        <a href="#" class="about">About</a>
+    </nav>
+</body>
+</html>
